@@ -1,8 +1,9 @@
 import img from '../assets/screen3img.png';
+import bg from '../assets/тайминг 1.png';
 
 const TimingPage = () => {
   return (
-    <div style={{justifyContent: 'start'}} className='container'>
+    <div style={{justifyContent: 'start', backgroundImage: `url(${bg})`}} className='container'>
       <div 
         style={{height: '100%', justifyContent: 'space-between'}} 
         className='content'>

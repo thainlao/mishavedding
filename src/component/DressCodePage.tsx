@@ -1,3 +1,5 @@
+import bg from '../assets/дресс код 1.png';
+
 const DressCodePage = () => {
     const colorPalette = [
         '#C1CDBD', '#93A38C', '#778870',
@@ -9,10 +11,11 @@ const DressCodePage = () => {
 
     return (
         <div 
+            style={{backgroundImage: `url(${bg})`}}
             className='container'>
-            <div className='content' style={{paddingTop: '25px'}}>
+            <div className='content' style={{paddingTop: '105px'}}>
                 <h1 className='title'>дресс код</h1>
-                <h2>Нам будет приятно, если при выборе наряда вы придержитесь палитры нашего торжества</h2>
+                <h2 style={{marginTop: '20px'}}>Нам будет приятно, если при выборе наряда вы придержитесь палитры нашего торжества</h2>
                 <div className='colorsGrid'>
                     {colorPalette.map((color, index) => (
                         <div 
