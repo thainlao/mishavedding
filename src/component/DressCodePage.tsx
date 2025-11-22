@@ -10,9 +10,8 @@ const DressCodePage = () => {
     return (
         <div 
             className='container'>
-            <div className='content'>
-                <h1 className='title'>дресс</h1>
-                <h1 className='title'>код</h1>
+            <div className='content' style={{paddingTop: '25px'}}>
+                <h1 className='title'>дресс код</h1>
                 <h2>Нам будет приятно, если при выборе наряда вы придержитесь палитры нашего торжества</h2>
                 <div className='colorsGrid'>
                     {colorPalette.map((color, index) => (

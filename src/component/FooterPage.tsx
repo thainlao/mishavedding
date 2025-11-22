@@ -9,8 +9,8 @@ const FooterPage = () => {
         <div 
             style={{backgroundImage: `url(${img})`}}
             className='container'>
-            <div className='content'>
-                <h2 style={{textAlign: 'center', fontSize: '27px'}}>Пожалуйста заполните анкету</h2>
+            <div className='content' style={{gap: '20px'}}>
+                <h2 style={{textAlign: 'center', fontSize: '27px'}}>Пожалуйста, заполните анкету</h2>
                 <button className='final_but' onClick={handleButtonClick}>
                     заполнить
                 </button>
