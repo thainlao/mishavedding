@@ -1,4 +1,4 @@
-import bg from '../assets/дресс код 1.png';
+import bg from '../assets/детали 1.png';
 
 const DetailsPage = () => {
     return (
