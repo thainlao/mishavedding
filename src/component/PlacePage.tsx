@@ -18,7 +18,7 @@ const PlacePage = () => {
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'start', gap: '6px'}}>
             <p>дня</p><h2 style={{whiteSpace: 'nowrap', transform: 'translateX(-5px)'}}>, для каждого будет своя</h2>
           </div>
-          <h2>комната</h2>
+          <h2>комната.</h2>
         </div>
 
 
