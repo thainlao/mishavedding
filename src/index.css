@@ -1,0 +1,241 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Callysto';
+  src: url('./assets/Callysto.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'Callysto', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./assets/screen1.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.title {
+  font-size: clamp(40px, 8vw, 60px);
+  color: #A3001D;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.date {
+  font-size: clamp(32px, 6vw, 50px);
+  color: #A3001D;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.image {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+  object-fit: contain;
+}
+
+h2{
+  width: 100%;
+  text-align: start;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  max-width: 300px;
+}
+
+h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  max-width: 300px;
+}
+
+p{
+  color: #A3001D;
+}
+
+.colored{
+  background: linear-gradient(45deg, #E11338, #D3F800, #00FFF2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: clamp(40px, 8vw, 60px);
+  margin: 0;
+  text-align: center;
+}
+
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.colorSquare {
+  aspect-ratio: 1 / 1;
+
+  transition: transform 0.2s ease;
+}
+
+.colorSquare:hover {
+  transform: scale(1.1);
+}
+
+.container section{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 80%;
+  justify-content: start;
+  max-width: 300px;
+}
+
+.inner_text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.inner_text a{
+  text-align: start;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  max-width: 300px;
+}
+
+.final_but {
+  background-color: #A3001D;
+  color: white;
+  width: 80%;
+  max-width: 300px;
+  font-size: 27px;
+  font-weight: 600;
+  height: 60px;
+
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Callysto', sans-serif;
+  
+  /* Плавные переходы */
+  transition: all 0.3s ease;
+  
+  /* Улучшаем внешний вид */
+  box-shadow: 0 4px 15px rgba(163, 0, 29, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover эффекты */
+.final_but:hover {
+  background-color: #8a0019;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(163, 0, 29, 0.4);
+}
+
+.final_but:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(163, 0, 29, 0.3);
+}
+
+/* Эффект "волны" при клике */
+.final_but::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.final_but:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+/* Для планшетов */
+@media (min-width: 768px) {
+    .image ,.container section, .final_but {
+        max-width: 500px;
+    }
+}
+
+/* Для больших экранов */
+@media (min-width: 1440px) {
+    .image ,.container section, .final_but{
+        max-width: 700px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-height: 600px) {
+    .content {
+        gap: 5px;
+        transform: scale(0.9);
+    }
+    
+    .image {
+        margin: 10px 0;
+        max-width: 250px;
+    }
+}
+
+/* Для предотвращения проблем с vh на мобильных устройствах */
+@supports (height: 100dvh) {
+    .container {
+        height: 100dvh;
+        max-height: 100dvh;
+        min-height: 100dvh;
+    }
+}
