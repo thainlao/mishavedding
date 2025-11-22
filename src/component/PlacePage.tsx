@@ -16,7 +16,7 @@ const PlacePage = () => {
             <h2> на ночь </h2><p style={{whiteSpace: 'nowrap'}}>до 14:00 следующего</p>
           </div>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'start', gap: '6px'}}>
-            <p>дня</p><h2 style={{whiteSpace: 'nowrap'}}> , для каждого будет своя</h2>
+            <p>дня</p><h2 style={{whiteSpace: 'nowrap', transform: 'translateX(-5px)'}}>, для каждого будет своя</h2>
           </div>
           <h2>комната</h2>
         </div>
